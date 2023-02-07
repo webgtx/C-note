@@ -4,7 +4,7 @@
 
 struct Hero {
     char name[12];
-    int lvl;
+    unsigned lvl;
     float hp;
 };
 
@@ -21,4 +21,5 @@ int main() {
     };
 
     printf("Hero stats\n Name: %s\n LVL: %d\n HP:%.1f\n", player.name, player.lvl, player.hp);
+    printf("NPC stats\n Name: %s\n LVL: %d\n HP:%.1f\n", npc.name, npc.lvl, npc.hp);
 }
