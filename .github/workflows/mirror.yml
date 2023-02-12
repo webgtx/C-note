@@ -13,7 +13,7 @@ jobs:
         with: 
           target_repo_url:
             ${{ format('git.zalupa.cloud/{0}.git', github.repository) }} 
-            ssh_private_key:
+          ssh_private_key:
             ${{ secrets.SSH_PRIVATE_KEY }}
 
   to_gitlab:
