@@ -1,59 +1,50 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
 /*
     If you needed cheatsheet with UNIX or GIT commands
     you can visit this repository github.com/webgtx/unixs
 */
 
+
+// Example usage
 int main() {
     int a = 2, b = 10;
-    if (a == b) { // Если a будет равным b, тогда будет выполнен код
-        // Здесь код что будет выполнен
-        // Если все одна строка кода, то фигурные скобки {}
-        // можно не ставить
-    } else if (a <= b) { // Если а будет меньшим или равным b
-        // Если предыдущее условие не будет выполнено,
-        // а здесь условие окажется верным,
-        // то будет выполнен этот код
+    if (a == b) {
+    } else if (a <= b) {
+      puts("b greater than a or equal");
     } else {
-        // Этот код сработает, если другие условия не будут выполнены
+      puts("any else conditions");
     }
 
 // '||' and '&&'
     if (a != b && a > b) {
-        // Код будет выполнен, если и первое, и второе условие
-        // окажутся верными
+      puts("not equal and greater");
     }
 
     if (a < b || a == b) {
-        // Код будет выполнен, если или первое, или второе условие
-        // окажется верным
+      puts("less or equal");
     }
 
-// Тернарная операция
+// Ternary operators 
     int x = 90;
     a = 8;
     int res = x < a ? (x + a) : (x - a);
     printf("%d\n", res);
 
 
-// Конструкция switch
+// Switch Contsturction 
     x = 23;
-    switch (x) { // Проверяем переменную x
-        case 1: // Если переменная будет равна 1, то здесь сработает код
-            // Может быть множество строк, а не только одна
-            printf("Переменная равна 1\n");
-            break; // Указываем конец для кода для этой проверки
-        case 56: // Если переменная будет равна 56, то здесь сработает код
-            // Может быть множество строк, а не только одна
-            printf("Переменная равна 56\n");
-            break; // Указываем конец для кода для этой проверки
-            // По аналогии таких проверок может быть множество
-            // Также можно добавить проверку, которая сработает в случае
-            // если все остальные проверки не сработают
+    switch (x) { // Match variable 
+        case 1: // if x equals 1 
+            printf("x == 1\n");
+            break; // End of block 
+        case 56: 
+            printf("x == 56\n");
+            break; 
         default:
             printf("Что-то другое\n");
-            break; // Можно и не ставить, так как это последние условие
+            break; // You can skip break statment on the last case 
     }
     return 0;
 }
